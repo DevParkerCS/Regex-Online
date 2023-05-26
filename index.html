@@ -1,0 +1,30 @@
+<!-- You can automatically create everything you see by just typing ! then pressing tab.  This will automatically create the boiler plate for a website. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Here we have to add in other files that we want to access this file.  We do this by typing link then pressing tab and it automatically create the link for a stylesheet and href is just what file are you referring to that can access this file. -->
+    <link rel="stylesheet" href="app.css">
+    <title>Regex Online</title>
+</head>
+
+<body>
+    <!-- divs: are used to divide sections on a website.  So if we want a large sections of things we put everything inside of a div and call that div a wrapper.
+    Class: the class is used to later on refer to a specifc part inside the html.  Let's say I wanted to make the regex-text-wrapper in the middle of the screen.  I would refer to the class and say this piece be cenetered.
+    for HTML we use the dash to seperate words in classes.
+     -->
+    <div class="regex-text-wrapper">
+        <!-- textarea is just an object of html that automatically creates a simple box that people can type in.
+        placeholder just adds placeholder text to the textarea before anything is typed -->
+        <textarea class="regex-text" placeholder="Enter Regex Here"></textarea>
+    </div>
+    <div class="normal-text-wrapper">
+        <textarea class="normal-text" placeholder="Enter Text Here"></textarea>
+    </div>
+</body>
+
+</html>

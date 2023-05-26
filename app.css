@@ -1,0 +1,46 @@
+/* We get the class in css by adding . which means class and then the name after the class.
+    just adding * means select everything in the html
+*/
+
+* {
+    /* We always want to add this at the top.  border-box just means that things width includes their borders which makes sizing things easier
+    margin 0 sets it so there is no unwanted white space on the edges. */
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.regex-text-wrapper {
+    /* display flex.  This is an important thing in css.  It is a bit advanced in all the use cases however it is very important and makes moving items around very easy. I would reccomend watching a couple videos on the box model and   */
+    display: flex;
+    /* this is a property of flexbox.  flexbox has two different axis like the x and y plane.  justify-content works on the xplain so if you do justify-content it takes everything that is inside of it and put's in the center of the x-plane */
+    justify-content: center;
+
+    /* Since we added margin 0 above where we set this things margin regex-text-wrapper now has a margin bottom of 3rem instead of 0 as css works from the top down to the bottom */
+    margin-bottom: .5rem;
+    margin-top: 3rem;
+}
+
+.normal-text-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.regex-text {
+    /* this just sets the width and the height of the current selected element.  80% is just 80% of the parent element which the parent in this case is just the wrapper since the regex-text is inside the wrapper regex-text-wrapper is the parent and regex-text is the child */
+    width: 50%;
+    height: 5rem;
+    /* textareas are normally resizable in the browser if you drag on the corners so this makes it a set height and width and can't be changed */
+    resize: none;
+    /* creates a border of 2px, a solid line (can also have dotted, dashed, etc.), and the color black */
+    border: 2px solid black;
+    /* Change size of font */
+    font-size: 1.2rem;
+}
+
+.normal-text {
+    width: 50%;
+    height: 10rem;
+    resize: none;
+    border: 2px solid black;
+    font-size: 1.5rem;
+}
