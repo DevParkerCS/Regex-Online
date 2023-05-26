@@ -16,8 +16,8 @@
     justify-content: center;
 
     /* Since we added margin 0 above where we set this things margin regex-text-wrapper now has a margin bottom of 3rem instead of 0 as css works from the top down to the bottom */
-    margin-bottom: .5rem;
     margin-top: 3rem;
+
 }
 
 .normal-text-wrapper {
@@ -28,13 +28,25 @@
 .regex-text {
     /* this just sets the width and the height of the current selected element.  80% is just 80% of the parent element which the parent in this case is just the wrapper since the regex-text is inside the wrapper regex-text-wrapper is the parent and regex-text is the child */
     width: 50%;
-    height: 5rem;
+    height: 4rem;
     /* textareas are normally resizable in the browser if you drag on the corners so this makes it a set height and width and can't be changed */
     resize: none;
     /* creates a border of 2px, a solid line (can also have dotted, dashed, etc.), and the color black */
     border: 2px solid black;
     /* Change size of font */
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    overflow: hidden;
+    line-height: 3.8rem;
+
+    /* padding is space on the inside of an object so if you want more space inside something add padding */
+    padding-left: 1.5rem;
+
+    background-color: rgba(128, 128, 128, 0.428);
+    box-shadow: 0px 0px black;
+    /* transition for the focus and hover below. .25s means 0.25 seconds of transition */
+    transition: ease-in-out box-shadow .25s;
+    /* removes outline when the text area was clicked */
+    outline: none;
 }
 
 .normal-text {
@@ -42,5 +54,25 @@
     height: 10rem;
     resize: none;
     border: 2px solid black;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    padding-left: 1rem;
+    background-color: rgba(128, 128, 128, 0.428);
+    box-shadow: 0px 0px black;
+    transition: ease-in-out box-shadow .25s;
+    outline: none;
+}
+
+.break {
+    height: 1rem;
+    background-color: gray;
+    width: 50%;
+    margin-left: 25%;
+}
+
+/* this is when the text area is hovered or clicked on then add a nice box shadow that just makes it pop out a little more */
+.regex-text:hover,
+.normal-text:hover,
+.regex-text:focus,
+.normal-text:focus {
+    box-shadow: 0px 0px 5px black;
 }

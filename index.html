@@ -17,13 +17,16 @@
     Class: the class is used to later on refer to a specifc part inside the html.  Let's say I wanted to make the regex-text-wrapper in the middle of the screen.  I would refer to the class and say this piece be cenetered.
     for HTML we use the dash to seperate words in classes.
      -->
-    <div class="regex-text-wrapper">
-        <!-- textarea is just an object of html that automatically creates a simple box that people can type in.
+    <div class="main-wrapper">
+        <div class="regex-text-wrapper">
+            <!-- textarea is just an object of html that automatically creates a simple box that people can type in.
         placeholder just adds placeholder text to the textarea before anything is typed -->
-        <textarea class="regex-text" placeholder="Enter Regex Here"></textarea>
-    </div>
-    <div class="normal-text-wrapper">
-        <textarea class="normal-text" placeholder="Enter Text Here"></textarea>
+            <textarea class="regex-text" placeholder="Enter Regex Here"></textarea>
+        </div>
+        <div class="break"></div>
+        <div class="normal-text-wrapper">
+            <textarea class="normal-text" placeholder="Enter Text Here"></textarea>
+        </div>
     </div>
 </body>
 
